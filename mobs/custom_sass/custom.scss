@@ -1,0 +1,107 @@
+//custom
+$primary: #4933a9;
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// SCSS for the Navbar
+.navbar {
+    &.navbar-expand-lg {
+      background-color: var(--bs-body-tertiary);
+  
+      .container-fluid {
+        .navbar-brand {
+          font-size: 1.2rem;
+          color: #c80909;
+  
+          &:hover {
+            text-decoration: none;
+            color: #51e217;
+          }
+        }
+  
+        .navbar-toggler {
+          border: none;
+          padding: 0.3rem;
+  
+          .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 30 30%22%3E%3Cpath stroke%3D%22rgba%280%2C 0%2C 0%2C 0.5%29%22 stroke-width%3D%222%22 stroke-linecap%3D%22round%22 stroke-miterlimit%3D%2210%22 d%3D%22M4 7h22M4 15h22M4 23h22%22/%3E%3C/svg%3E');
+          }
+        }
+  
+        .collapse {
+          &.navbar-collapse {
+            .navbar-nav {
+              .nav-link {
+                color: #cd2c2c;
+                padding: 0.5rem 1rem;
+  
+                &:hover {
+                  color: #3cd534;
+                }
+  
+                &.active {
+                  color: #e31cae;
+                  font-weight: bold;
+                }
+  
+                &.disabled {
+                  color: #f3f7ac;
+                  pointer-events: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //card
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; // Increased gap for better spacing
+  margin: 2rem; // Increased margin for a more spacious layout
+
+  .col {
+    flex: 1 0 calc(50% - 1.5rem); // Adjusted for new gap spacing
+    max-width: calc(50% - 1.5rem);
+
+    @media (max-width: 768px) {
+      flex: 1 0 100%; // Single column layout on smaller screens
+      max-width: 100%;
+    }
+
+    .card {
+      border: 1px solid #ccc; // Softer border color
+      border-radius: 0.5rem; // Slightly more rounded corners
+      overflow: hidden;
+      background-color: #f8f9fa; // Light gray background
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); // Enhanced shadow effect
+
+      .card-img-top {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-bottom: 1px solid #dee2e6; // Divider line below image
+      }
+
+      .card-body {
+        padding: 1.25rem; // Increased padding for better readability
+
+        .card-title {
+          font-size: 1.5rem; // Larger font for title
+          font-weight: 600; // Bolder text
+          margin-bottom: 0.75rem; // Increased spacing below title
+        }
+
+        .card-text {
+          font-size: 1.1rem; // Slightly larger font size
+          color: #495057; // Darker text color for better contrast
+        }
+      }
+    }
+  }
+}
+
